@@ -1,34 +1,403 @@
----
-title: Home
-content_blocks:
-  - _bookshop_name: hero
-    title: Мяги Кирилл Александрович
-    description_html: >-
-      <p><strong>Заместитель главного врача</strong>&nbsp;по части
-      информационных технологий в Государственном бюджетном учреждении
-      здравоохранения "<strong>Самарский областной клинический кардиологический
-      диспансер им. В.П. Полякова</strong>"</p>
-    image: /uploads/тест-2.jpg
-    image_alt: Мяги Кирилл
-    cta_button: Get in touch
-    cta_button_link: '#contact'
-    works_button: See my works
-    works_button_link: '#projects'
-  - _bookshop_name: testimonials-section
-    title: Карьера
-    description_html: ''
-    show_testimonials: true
-  - _bookshop_name: content
-    content_html: >-
-      <h1><strong><font><font>Образование</font></font></strong></h1><ul><li><font><font>​​​​​​​Компьютерная
-      безопасность (специалитет), математический факультет, Федеральное
-      государственное автономное образовательное учреждение высшего образования
-      "Самарский национальный исследовательский университет имени академика С.П.
-      Королева", 2015 - 2021</font></font>​​​​​​​</li><li>Телемедицина и системы
-      принятия врачебных решений (магистратура), информатика и вычислительная
-      техника, передовая медицинская инженерная школа СамГМУ, Федеральное
-      государсвенное бюджетное образовательное учреждение высшего образования
-      "Самарский государственный медицинский университет", 2023 -
-      2025</li><li>Государсвенное и муниципальное управление (бакалавриат), АУП,
-      БИОР, 2023 - 2026</li></ul>
----
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>miagika</title>
+  <meta name='description' content='Визитка'>
+
+  <link rel="canonical" href="https://miagika.ru">
+
+  <!-- Twitter Card -->
+  <!-- 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.general_settings.title }}{% else %}{{ page.title }} – {{ site.data.general_settings.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.url == "/" %}{{ site.data.general_settings.description | strip_html | xml_escape }}{% elsif page.description %}{{ page.description | strip_html | xml_escape }}{% else %}{{ page.excerpt | strip_html | xml_escape }}{% endif %}">
+  <meta name="twitter:image:src" content="{% if page.url == "/" %}{{ site.data.general_settings.social_media_share_image | absolute_url }}{% else %}{{ page.image | absolute_url }}{% endif %}">
+-->
+  <!-- Facebook OpenGraph -->
+  <!-- 
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.data.general_settings.title }}{% else %}{{ page.title }} – {{ site.data.general_settings.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.url == "/" %}{{ site.data.general_settings.description | strip_html | xml_escape }}{% elsif page.description %}{{ page.description | strip_html | xml_escape }}{% else %}{{ page.excerpt | strip_html | xml_escape }}{% endif %}">
+  <meta property="og:image" content="{% if page.url == "/" %}{{ site.data.general_settings.social_media_share_image | absolute_url }}{% else %}{{ page.image | absolute_url }}{% endif %}">
+ -->
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+<body>
+
+  
+
+<!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+            <img class="logo__image" src="/uploads/logo.png" alt="miagika">
+
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Меню</div>
+
+              <ul class="nav__list list-reset">
+
+                <!-- <li class="nav__item dropdown">
+                  <span class="nav__link dropdown-toggle">{{ item.title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <div class="dropdown-menu">
+                    {% for submenu-item in item.submenu %}
+                      <a href="{{ submenu-item.url }}" class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
+                    {% endfor %}
+                  </div>
+                </li>
+
+                {% else %} -->
+
+                <li class="nav__item">
+                  <a href="/" class="nav__link active-link">Главная</a>
+                </li>
+                <li class="nav__item">
+                  <a href="/contacts/" class="nav__link">Контакты</a>
+                </li>
+
+            </ul>
+          </div>
+
+          <div class="social">
+            <ul class="social__list list-reset">
+              
+              <li class="social__item">
+                <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png"></i></a>
+              </li>
+              
+              <li class="social__item">
+                <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png"></i></a>
+              </li>
+              
+              <li class="social__item">
+                <a class="social__link" href="https://wa.me/79679200743" target="_blank" rel="noopener" aria-label="whatsapp icon"><i><img src="/uploads/icon/icon-whatsapp.png"></i></a>
+              </li>
+              
+              <li class="social__item">
+                <a class="social__link" href="viber://add?number=79679200743" target="_blank" rel="noopener" aria-label="viber icon"><i><img src="/uploads/icon/icon-viber.png"></i></a>
+              </li>
+              
+            </ul>
+          </div>
+
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+
+    <!-- 
+        Bookshop components are accessed using the bookshop tag, 
+        using the same syntax as the standard Jekyll include tag.
+    -->
+    <!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+          
+    <div class="c-page">
+
+
+      <!--bookshop-live name(hero/hero.jekyll.html) params(bind=block) context(block=content_blocks[0]) -->
+            <!-- begin hero -->
+  
+  <section class="c-hero animate">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+          <div class="c-hero__inner">
+  
+            <div class="c-hero__left">
+              <h1 class="c-hero__title">Мяги Кирилл Александрович</h1>
+              <div class="c-hero__description"><p><strong>Заместитель главного врача</strong>&nbsp;по части информационных технологий в Государственном бюджетном учреждении здравоохранения "<strong>Самарский областной клинический кардиологический диспансер им. В.П. Полякова</strong>"</p></div>
+              <div class="c-hero__btn">
+                <a href="/contacts/" class="cta-button c-button c-button--primary c-button--small">Контакты</a>
+  <!--           <a class="works-button c-button c-button--secondary c-button--small" href="#projects">
+                  <span class="circle-bg"><i class="ion ion-md-arrow-down button-arrow"></i></span> Карьера                 
+                </a>
+      -->
+              </div>
+            </div>
+  
+            <div class="c-hero__right">
+              <div class="c-hero__image">
+                <img loading="lazy" src="/uploads/iam2.jpg" alt="">
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end hero -->
+            <!--bookshop-live end-->
+  
+      <!--bookshop-live name(testimonials-section/testimonials-section.jekyll.html) params(bind=block) context(block=content_blocks[1]) -->
+            <!-- begin testimonials -->
+  <section class="section testimonials animate">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+  
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">Карьера</h2>
+              <ul class="controls list-reset" id="customize-controls" aria-label="Slider Navigation" tabindex="0">
+                <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                  <i class="ion ion-ios-arrow-back"></i>
+                </li>
+                <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+                  <i class="ion ion-ios-arrow-forward"></i>
+                </li>
+              </ul>
+            </div>
+            <div class="section__description"></div>
+          </div>
+  
+          
+          <div class="testimonials__slider my-slider">
+            
+              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[0]) -->
+            
+  <div class="c-testimonial-card">
+    <div class="c-testimonial-card__content">
+      <div class="c-testimonial-card__client-meta">
+        
+          <div class="c-testimonial-card__image-container">
+            <img class="c-testimonial-card__client-avatar" src="/uploads/cardio.png" alt="ГБУЗ "Самарский областной клинический кардиологический диспансер им. В.П. Полякова"">
+          </div>
+        
+        <div class="c-testimonial-card__client-info">
+          
+            <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной клинический кардиологический диспансер им. В.П. Полякова"</h3>
+          
+          
+            <p class="c-testimonial-card__client-position">Заместитель главного врача по информационным технологиям</p>
+          
+        </div>
+      </div>
+      
+        <p class="c-testimonial-card__client-text">Май 2023 - по н.в.</p>
+      
+    </div>
+  </div>
+            <!--bookshop-live end-->
+            
+              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[1]) -->
+            
+  <div class="c-testimonial-card">
+    <div class="c-testimonial-card__content">
+      <div class="c-testimonial-card__client-meta">
+        
+          <div class="c-testimonial-card__image-container">
+            <img class="c-testimonial-card__client-avatar" src="/uploads/miac.png" alt="ГБУЗ "Самарский областной медицинский информационно-аналитический центр"">
+          </div>
+        
+        <div class="c-testimonial-card__client-info">
+          
+            <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной медицинский информационно-аналитический центр"</h3>
+          
+          
+            <p class="c-testimonial-card__client-position">Начальник отдела защиты информации</p>
+          
+        </div>
+      </div>
+      
+        <p class="c-testimonial-card__client-text">Октябрь 2021 - Январь 2023</p>
+      
+    </div>
+  </div>
+            <!--bookshop-live end-->
+            
+              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[2]) -->
+            
+  <div class="c-testimonial-card">
+    <div class="c-testimonial-card__content">
+      <div class="c-testimonial-card__client-meta">
+        
+          <div class="c-testimonial-card__image-container">
+            <img class="c-testimonial-card__client-avatar" src="/uploads/sf.png" alt="ГКУ СО "Самарафармация"">
+          </div>
+        
+        <div class="c-testimonial-card__client-info">
+          
+            <h3 class="c-testimonial-card__client-name">ГКУ СО "Самарафармация"</h3>
+          
+          
+            <p class="c-testimonial-card__client-position">Инженер по защите информации</p>
+          
+        </div>
+      </div>
+      
+        <p class="c-testimonial-card__client-text">Февраль 2021 - Октябрь 2021</p>
+      
+    </div>
+  </div>
+            <!--bookshop-live end-->
+            
+              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[3]) -->
+            
+  <div class="c-testimonial-card">
+    <div class="c-testimonial-card__content">
+      <div class="c-testimonial-card__client-meta">
+        
+          <div class="c-testimonial-card__image-container">
+            <img class="c-testimonial-card__client-avatar" src="/uploads/miac.png" alt="ГБУЗ "Самарский областной медицинский информационно-аналитический центр"">
+          </div>
+        
+        <div class="c-testimonial-card__client-info">
+          
+            <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной медицинский информационно-аналитический центр"</h3>
+          
+          
+            <p class="c-testimonial-card__client-position">Специалист отдела защиты информации</p>
+          
+        </div>
+      </div>
+      
+        <p class="c-testimonial-card__client-text">Сентябрь 2020 - Февраль 2021</p>
+      
+    </div>
+  </div>
+            <!--bookshop-live end-->
+            
+          </div>
+          
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end testimonials -->
+            <!--bookshop-live end-->
+  
+      <!--bookshop-live name(content/content.jekyll.html) params(bind=block) context(block=content_blocks[2]) -->
+            <div class="container">
+    <div class="page animate">
+      <h2><strong><font><font>Образование</font></font></strong></h2><ul><li><font><font><strong>​​​​​​​Компьютерная безопасность (специалитет)</strong>, математический факультет, Федеральное государственное автономное образовательное учреждение высшего образования "Самарский национальный исследовательский университет имени академика С.П. Королева", 2015 - 2021</font></font>​​​​​​​</li><li><strong>Телемедицина и системы принятия врачебных решений (магистратура)</strong>, информатика и вычислительная техника, передовая медицинская инженерная школа СамГМУ, Федеральное государсвенное бюджетное образовательное учреждение высшего образования "Самарский государственный медицинский университет", 2023 - 2025</li><li><strong>Государственное и муниципальное управление (бакалавриат)</strong>, АУП, БИОР, 2023 - 2026</li></ul>
+    </div>
+  </div>
+            <!--bookshop-live end-->
+  
+  
+  </div>
+  
+            <!--bookshop-live end-->
+  
+      <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+
+    <!-- begin footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12">
+    
+            <!--bookshop-live name(social-link.jekyll.html) params() context() -->
+              
+    <div class="social">
+      <ul class="social__list list-reset">
+        
+        <li class="social__item">
+          <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png"></i></a>
+        </li>
+        
+        <li class="social__item">
+          <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png"></i></a>
+        </li>
+
+        <li class="social__item">
+          <a class="social__link" href="https://wa.me/79679200743" target="_blank" rel="noopener" aria-label="whatsapp icon"><i><img src="/uploads/icon/icon-whatsapp.png"></i></a>
+        </li>
+        
+        <li class="social__item">
+          <a class="social__link" href="viber://add?number=79679200743" target="_blank" rel="noopener" aria-label="viber icon"><i><img src="/uploads/icon/icon-viber.png"></i></a>
+        </li>
+        
+      </ul>
+    </div>
+    
+              <!--bookshop-live end-->
+    
+            <ul class="footer_nav list-reset">
+              
+              <li class="footer_nav__item">
+                <a href="/" class="footer_nav__link">miagika</a>
+              </li>
+              
+            </ul>
+    
+            <div class="copyright"><p>2024 © business card</p></div>
+    
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!--
+        load the live component for CloudCannon live previews.
+    -->
+  
+<script>
+(function(){
+  const bookshopLiveSetup = (CloudCannon) => {
+    CloudCannon.enableEvents();
+
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.src = `/_cloudcannon/bookshop-live.js`;
+    script.onload = function() {
+      window.bookshopLive = new window.BookshopLive({
+        remoteGlobals: ['/_cloudcannon/initial-site-settings.json']
+      });
+      const updateBookshopLive = async () => {
+        const frontMatter = await CloudCannon.value();
+        const options = window.bookshopLiveOptions || {};
+        await window.bookshopLive.update({page: frontMatter}, options);
+        CloudCannon?.refreshInterface?.();
+      }
+      document.addEventListener('cloudcannon:update', updateBookshopLive);
+      updateBookshopLive();
+    }
+    head.appendChild(script);
+  }
+
+  document.addEventListener('cloudcannon:load', function (e) {
+    bookshopLiveSetup(e.detail.CloudCannon);
+  });
+})();
+</script>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
