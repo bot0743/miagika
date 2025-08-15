@@ -118,19 +118,8 @@
   </div>
 </header>
 <!-- end header -->
-
-
-    <!-- 
-        Bookshop components are accessed using the bookshop tag, 
-        using the same syntax as the standard Jekyll include tag.
-    -->
-    <!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
           
     <div class="c-page">
-
-
-      <!--bookshop-live name(hero/hero.jekyll.html) params(bind=block) context(block=content_blocks[0]) -->
-            <!-- begin hero -->
   
   <section class="c-hero animate">
     <div class="container">
@@ -159,9 +148,7 @@
     </div>
   </section>
   <!-- end hero -->
-            <!--bookshop-live end-->
-  
-      <!--bookshop-live name(testimonials-section/testimonials-section.jekyll.html) params(bind=block) context(block=content_blocks[1]) -->
+        
             <!-- begin testimonials -->
   <section class="section testimonials animate">
     <div class="container">
@@ -186,7 +173,6 @@
           
           <div class="testimonials__slider my-slider">
             
-              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[0]) -->
 
    <div class="c-testimonial-card">
     <div class="c-testimonial-card__content">
@@ -233,9 +219,6 @@
       
     </div>
   </div>
-            <!--bookshop-live end-->
-            
-              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[1]) -->
             
   <div class="c-testimonial-card">
     <div class="c-testimonial-card__content">
@@ -259,9 +242,6 @@
       
     </div>
   </div>
-            <!--bookshop-live end-->
-            
-              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[2]) -->
             
   <div class="c-testimonial-card">
     <div class="c-testimonial-card__content">
@@ -285,9 +265,6 @@
       
     </div>
   </div>
-            <!--bookshop-live end-->
-            
-              <!--bookshop-live name(testimonial-card/testimonial-card.jekyll.html) params(testimonial-item=testimonial-item) context(testimonial=item=site.testimonials[3]) -->
             
   <div class="c-testimonial-card">
     <div class="c-testimonial-card__content">
@@ -320,18 +297,13 @@
       </div>
     </div>
   </section>
-  <!-- end testimonials -->
-            <!--bookshop-live end-->
-  
-      <!--bookshop-live name(content/content.jekyll.html) params(bind=block) context(block=content_blocks[2]) -->
+
             <div class="container">
     <div class="page animate">
       <h2><strong><font><font>Образование</font></font></strong></h2><ul><li><font><font><strong>​​​​​​​Компьютерная безопасность (специалитет)</strong>, математический факультет, Федеральное государственное автономное образовательное учреждение высшего образования "Самарский национальный исследовательский университет имени академика С.П. Королева", 2015 - 2021</font></font>​​​​​​​</li><li><strong>Телемедицина и системы принятия врачебных решений (магистратура)</strong>, информатика и вычислительная техника, передовая медицинская инженерная школа СамГМУ, Федеральное государсвенное бюджетное образовательное учреждение высшего образования "Самарский государственный медицинский университет", 2023 - 2025</li><li><strong>Государственное и муниципальное управление (бакалавриат)</strong>, АУП, БИОР, 2023 - 2026</li></ul>
     </div>
   </div>
             <!--bookshop-live end-->
-  
-  
   </div>
   
             <!--bookshop-live end-->
@@ -344,8 +316,6 @@
         <div class="row">
           <div class="col col-12">
     
-            <!--bookshop-live name(social-link.jekyll.html) params() context() -->
-              
     <div class="social">
       <ul class="social__list list-reset">
         
@@ -385,40 +355,6 @@
       </div>
     </footer>
     <!-- end footer -->
-
-    <!--
-        load the live component for CloudCannon live previews.
-    -->
-  
-<script>
-(function(){
-  const bookshopLiveSetup = (CloudCannon) => {
-    CloudCannon.enableEvents();
-
-    const head = document.querySelector('head');
-    const script = document.createElement('script');
-    script.src = `/_cloudcannon/bookshop-live.js`;
-    script.onload = function() {
-      window.bookshopLive = new window.BookshopLive({
-        remoteGlobals: ['/_cloudcannon/initial-site-settings.json']
-      });
-      const updateBookshopLive = async () => {
-        const frontMatter = await CloudCannon.value();
-        const options = window.bookshopLiveOptions || {};
-        await window.bookshopLive.update({page: frontMatter}, options);
-        CloudCannon?.refreshInterface?.();
-      }
-      document.addEventListener('cloudcannon:update', updateBookshopLive);
-      updateBookshopLive();
-    }
-    head.appendChild(script);
-  }
-
-  document.addEventListener('cloudcannon:load', function (e) {
-    bookshopLiveSetup(e.detail.CloudCannon);
-  });
-})();
-</script>
 
     <script src="/js/scripts.js"></script>
     <script src="/js/common.js"></script>
