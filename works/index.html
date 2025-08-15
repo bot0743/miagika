@@ -112,19 +112,8 @@
   </div>
 </header>
 <!-- end header -->
-
-    
-
-    <!-- 
-        Bookshop components are accessed using the bookshop tag, 
-        using the same syntax as the standard Jekyll include tag.
-    -->
-    <!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
           
 <div class="c-page">
-
-
-    <!--bookshop-live name(page-heading/page-heading.jekyll.html) params(bind=block) context(block=content_blocks[0]) -->
           
 <div class="container">
   <div class="c-page-heading">
@@ -251,8 +240,6 @@
   <div class="container">
     <div class="row">
       <div class="col col-12">
-
-        <!--bookshop-live name(social-link.jekyll.html) params() context() -->
           
         <div class="social">
             <ul class="social__list list-reset">
@@ -293,39 +280,6 @@
   </div>
 </footer>
 <!-- end footer -->
-
-    <!--
-        load the live component for CloudCannon live previews.
-    -->
-    <script>
-        (function(){
-          const bookshopLiveSetup = (CloudCannon) => {
-            CloudCannon.enableEvents();
-        
-            const head = document.querySelector('head');
-            const script = document.createElement('script');
-            script.src = `/_cloudcannon/bookshop-live.js`;
-            script.onload = function() {
-              window.bookshopLive = new window.BookshopLive({
-                remoteGlobals: ['/_cloudcannon/initial-site-settings.json']
-              });
-              const updateBookshopLive = async () => {
-                const frontMatter = await CloudCannon.value();
-                const options = window.bookshopLiveOptions || {};
-                await window.bookshopLive.update({page: frontMatter}, options);
-                CloudCannon?.refreshInterface?.();
-              }
-              document.addEventListener('cloudcannon:update', updateBookshopLive);
-              updateBookshopLive();
-            }
-            head.appendChild(script);
-          }
-        
-          document.addEventListener('cloudcannon:load', function (e) {
-            bookshopLiveSetup(e.detail.CloudCannon);
-          });
-        })();
-        </script>
         
             <script src="/js/scripts.js"></script>
             <script src="/js/common.js"></script>
