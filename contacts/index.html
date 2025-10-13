@@ -208,47 +208,15 @@
           
         </ul>
 
-        <div class="copyright"><p>2025 © business card</p></div>
+        <div class="copyright"><p>{year} © business card</p></div>
 
       </div>
     </div>
   </div>
 </footer>
 <!-- end footer -->
-
-    <!--
-        load the live component for CloudCannon live previews.
-    -->
-    <script>
-        (function(){
-          const bookshopLiveSetup = (CloudCannon) => {
-            CloudCannon.enableEvents();
         
-            const head = document.querySelector('head');
-            const script = document.createElement('script');
-            script.src = `/_cloudcannon/bookshop-live.js`;
-            script.onload = function() {
-              window.bookshopLive = new window.BookshopLive({
-                remoteGlobals: ['/_cloudcannon/initial-site-settings.json']
-              });
-              const updateBookshopLive = async () => {
-                const frontMatter = await CloudCannon.value();
-                const options = window.bookshopLiveOptions || {};
-                await window.bookshopLive.update({page: frontMatter}, options);
-                CloudCannon?.refreshInterface?.();
-              }
-              document.addEventListener('cloudcannon:update', updateBookshopLive);
-              updateBookshopLive();
-            }
-            head.appendChild(script);
-          }
-        
-          document.addEventListener('cloudcannon:load', function (e) {
-            bookshopLiveSetup(e.detail.CloudCannon);
-          });
-        })();
-        </script>
-        
-            <script src="/js/scripts.js"></script>
-            <script src="/js/common.js"></script>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/year.js"></script>
 </html>
