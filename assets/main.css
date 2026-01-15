@@ -281,7 +281,7 @@
 
 .c-blog-card__title {
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 4; /*# 4 - количество строк заголовка в блоке */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -292,7 +292,7 @@
 .c-blog-card__excerpt {
   flex-grow: 1;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5; /*# 5 - количество строк описания в блоке */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
