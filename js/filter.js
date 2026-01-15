@@ -2,6 +2,41 @@ document.addEventListener('DOMContentLoaded', function() {
   const articles = document.querySelectorAll('.c-blog-card');
   const tagButtons = document.querySelectorAll('.tag-btn');
   const articleCount = document.getElementById('article-count');
+  const articleWord = document.getElementById('article-word');
+  
+  // Функция для склонения слова "статья"
+  function getArticleWord(count) {
+    const lastDigit = count % 10;
+    const lastTwoDigits = count % 100;
+    
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+      return 'статей';
+    }
+    
+    switch (lastDigit) {
+      case 1:
+        return 'статья';
+      case 2:
+      case 3:
+      case 4:
+        return 'статьи';
+      default:
+        return 'статей';
+    }
+  }
+  
+  // Обновление счетчика и слова
+  function updateCounter(count) {
+    if (articleCount) {
+      articleCount.textContent = count;
+    }
+    if (articleWord) {
+      articleWord.textContent = getArticleWord(count);
+    }
+  }
+  
+  // Инициализация счетчика
+  updateCounter(articles.length);
   
   // Фильтрация по тегам
   tagButtons.forEach(button => {
@@ -43,9 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
       // Обновляем счетчик
-      if (articleCount) {
-        articleCount.textContent = visibleCount;
-      }
+      updateCounter(visibleCount);
     });
   });
   
@@ -72,9 +105,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-  // Инициализация счетчика
-  if (articleCount) {
-    articleCount.textContent = articles.length;
-  }
 });
