@@ -3,13 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const tagButtons = document.querySelectorAll('.tag-btn');
   const articleCount = document.getElementById('article-count');
   
-  // Собираем все уникальные теги из статей
-  const allTags = new Set();
-  articles.forEach(article => {
-    const tags = article.getAttribute('data-tags').split(',');
-    tags.forEach(tag => allTags.add(tag.trim()));
-  });
-  
   // Фильтрация по тегам
   tagButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -23,25 +16,36 @@ document.addEventListener('DOMContentLoaded', function() {
       let visibleCount = 0;
       
       articles.forEach(article => {
-        const articleTags = article.getAttribute('data-tags').split(',').map(t => t.trim());
-        
-        if (selectedTag === 'all' || articleTags.includes(selectedTag)) {
+        if (selectedTag === 'all') {
           article.style.display = 'block';
           visibleCount++;
-          
-          // Плавное появление
-          article.style.opacity = '0';
-          setTimeout(() => {
-            article.style.transition = 'opacity 0.3s';
-            article.style.opacity = '1';
-          }, 10);
         } else {
-          article.style.display = 'none';
+          // Проверяем, есть ли у статьи нужный тег
+          const articleTags = article.dataset.tags ? article.dataset.tags.split(',') : [];
+          const tagElements = article.querySelectorAll('.c-blog-card__tag');
+          let hasTag = false;
+          
+          // Проверяем data-tag у тегов внутри статьи
+          tagElements.forEach(tagElement => {
+            if (tagElement.dataset.tag === selectedTag) {
+              hasTag = true;
+            }
+          });
+          
+          // Или проверяем через data-tags статьи
+          if (articleTags.includes(selectedTag) || hasTag) {
+            article.style.display = 'block';
+            visibleCount++;
+          } else {
+            article.style.display = 'none';
+          }
         }
       });
       
       // Обновляем счетчик
-      articleCount.textContent = visibleCount;
+      if (articleCount) {
+        articleCount.textContent = visibleCount;
+      }
     });
   });
   
@@ -49,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.c-blog-card__tag').forEach(tag => {
     tag.addEventListener('click', function(e) {
       e.preventDefault();
+      e.stopPropagation(); // Останавливаем всплытие
       const tagName = this.dataset.tag;
       
       // Находим соответствующую кнопку фильтра и кликаем по ней
@@ -57,11 +62,19 @@ document.addEventListener('DOMContentLoaded', function() {
         filterButton.click();
         
         // Прокрутка к фильтрам
-        document.querySelector('.tags-filter').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        const tagsFilter = document.querySelector('.tags-filter');
+        if (tagsFilter) {
+          tagsFilter.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       }
     });
   });
+  
+  // Инициализация счетчика
+  if (articleCount) {
+    articleCount.textContent = articles.length;
+  }
 });
