@@ -285,7 +285,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 2.8em; /* Примерно 2 строки текста */
+  min-height: 5.5em;
   margin-bottom: 10px;
 }
 
@@ -296,7 +296,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 6.5em; /* Примерно 4 строки текста */
+  min-height: 4.8em;
   margin-bottom: 15px;
 }
 
