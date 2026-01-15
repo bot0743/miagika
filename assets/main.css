@@ -304,4 +304,73 @@
   align-items: stretch;
 }
 
+/* Стили для кнопок фильтров */
+.tags-filter {
+  margin: 40px 0 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eef2f7;
+}
+
+.tags-filter h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #110E38;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tag-btn {
+  padding: 8px 16px;
+  background: #f2f6ff;
+  border: 2px solid #d5dce3;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1495a7;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tag-btn:hover {
+  background: #e1ecff;
+  border-color: #1495a7;
+}
+
+.tag-btn.active {
+  background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
+  color: white;
+  border-color: transparent;
+}
+
+.filter-info {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Для тегов внутри статей - делаем кликабельными */
+.c-blog-card__tag {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.c-blog-card__tag:hover {
+  opacity: 0.8;
+}
+
+/* Адаптивность фильтров */
+@media (max-width: 768px) {
+  .tags-list {
+    gap: 8px;
+  }
+  
+  .tag-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
