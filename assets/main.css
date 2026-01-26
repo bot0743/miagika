@@ -418,3 +418,48 @@
 }
 
 /*# sourceMappingURL=main.css.map */
+/* Исправление для тегов - всегда в одну строку */
+.c-blog-card__tags-box {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  min-height: 32px;
+  align-items: center;
+}
+
+/* Убираем полосу прокрутки, но оставляем возможность скролла */
+.c-blog-card__tags-box::-webkit-scrollbar {
+  display: none;
+}
+
+.c-blog-card__tags-box {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Более компактные теги */
+.c-blog-card__tag {
+  padding: 6px 10px;
+  font-size: 11px;
+  line-height: 1;
+  margin-right: 6px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Гарантируем одинаковую высоту для всех карточек */
+.c-blog-card__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-blog-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
