@@ -9,17 +9,14 @@
   <meta name="description" content="Кирилл Мяги — специалист по защите информации. Конфиденциальные консультации по цифровой приватности, защите от слежки и утечек данных. Антикризисное управление и прохождение проверок.">
   <link rel="canonical" href="https://miagika.ru">
 
-  <!-- Шрифты Google (рекомендую в будущем скачать и разместить локально) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/main.css">
 
   <style>
-    /* ===== Секция конфиденциальных консультаций ===== */
     .section--compact {
       padding: 30px 0; 
     }
-
     .c-consultation {
       position: relative;
       padding: 48px 40px; 
@@ -59,7 +56,6 @@
     }
     .c-consultation__text p { margin: 0 0 16px; }
     .c-consultation__text p:last-child { margin-bottom: 0; }
-    
     .c-consultation__btn {
       position: relative;
       z-index: 1;
@@ -90,8 +86,6 @@
     .c-consultation__btn:hover::after {
       transform: translateX(4px);
     }
-
-    /* ===== Компактные списки в блоке «Обо мне» ===== */
     .c-about-list {
       list-style: none;
       margin: 0;
@@ -123,13 +117,46 @@
     .c-about-section + .c-about-section {
       margin-top: 40px;
     }
-
-    /* ===== Мобильная адаптация ===== */
     @media (max-width: 576px) {
       .c-consultation { padding: 32px 24px; }
       .c-consultation__title { font-size: 24px; }
       .c-consultation__text { font-size: 16px; }
       .c-hero__btn { flex-wrap: wrap; }
+    }
+    .c-blog-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .c-blog-card__inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .c-blog-card__content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .c-blog-card__meta {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    .c-blog-card__excerpt {
+      flex-grow: 1;
+    }
+    @media (min-width: 769px) {
+      .c-hero__left {
+        max-width: 100%;
+        padding-right: 40px;
+      }
+      .c-hero__title {
+        font-size: 48px;
+        line-height: 1.15;
+      }
+      .c-hero__description p {
+        font-size: 19px;
+        line-height: 1.7;
+      }
     }
   </style>
 </head>
