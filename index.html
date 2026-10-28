@@ -6,18 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Кирилл Мяги — цифровая приватность и защита от слежки</title>
-  <meta name="description" content="Кирилл Мяги — специалист по защите информации. Конфиденциальные консультации по цифровой приватности, защите от слежки и утечек данных. Блог о безопасности для обычных людей.">
+  <meta name="description" content="Кирилл Мяги — специалист по защите информации. Конфиденциальные консультации по цифровой приватности, защите от слежки и утечек данных. Антикризисное управление и прохождение проверок.">
   <link rel="canonical" href="https://miagika.ru">
 
+  <!-- Шрифты Google (рекомендую в будущем скачать и разместить локально) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="/assets/main.css">
 
   <style>
     /* ===== Секция конфиденциальных консультаций ===== */
+    .section--compact {
+      padding: 30px 0; 
+    }
+
     .c-consultation {
       position: relative;
-      padding: 60px 48px;
+      padding: 48px 40px; 
       border-radius: 16px;
       background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
       color: #fff;
@@ -54,6 +59,7 @@
     }
     .c-consultation__text p { margin: 0 0 16px; }
     .c-consultation__text p:last-child { margin-bottom: 0; }
+    
     .c-consultation__btn {
       position: relative;
       z-index: 1;
@@ -69,17 +75,20 @@
       background: #fff;
       transition: all .25s ease;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
     }
     .c-consultation__btn:hover {
       color: #110E38;
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     }
-    .c-consultation__btn i {
+    .c-consultation__btn::after {
+      content: "→";
+      font-size: 18px;
       transition: transform .25s ease;
     }
-    .c-consultation__btn:hover i {
-      transform: translateX(3px);
+    .c-consultation__btn:hover::after {
+      transform: translateX(4px);
     }
 
     /* ===== Компактные списки в блоке «Обо мне» ===== */
@@ -117,7 +126,7 @@
 
     /* ===== Мобильная адаптация ===== */
     @media (max-width: 576px) {
-      .c-consultation { padding: 40px 24px; }
+      .c-consultation { padding: 32px 24px; }
       .c-consultation__title { font-size: 24px; }
       .c-consultation__text { font-size: 16px; }
       .c-hero__btn { flex-wrap: wrap; }
@@ -134,7 +143,7 @@
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106779061', 'ym');
+    })(window, document,'script', 'https://mc.yandex.ru/metrika/tag.js?id=106779061', 'ym');
 
     ym(106779061, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
@@ -156,7 +165,7 @@
         <nav class="main-nav">
           <div class="main-nav__box">
             <div class="nav__icon-close">
-              <i class="ion ion-md-close"></i>
+              <i class="ion ion-md-close"></i> <!-- Можно заменить на крестик "×", если хотите полностью убрать иконочный шрифт -->
             </div>
             <div class="nav__title">Меню</div>
             <ul class="nav__list list-reset">
@@ -169,23 +178,23 @@
           <div class="social">
             <ul class="social__list list-reset">
               <li class="social__item">
-                <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt=""></i></a>
+                <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt="Позвонить"></i></a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt=""></i></a>
+                <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt="ВКонтакте"></i></a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt=""></i></a>
+                <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt="Telegram"></i></a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt=""></i></a>
+                <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt="Почта"></i></a>
               </li>
             </ul>
           </div>
         </nav>
 
         <div class="nav-button">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i> <!-- Бургер-меню -->
         </div>
 
       </div>
@@ -238,7 +247,7 @@
           <div class="section__info animate">
             <div class="section__head">
               <h2 class="section__title">С чего начать</h2>
-              <a class="section__link" href="/works/">Все статьи <i class="ion ion-ios-arrow-forward"></i></a>
+              <a class="section__link" href="/works/">Все статьи →</a>
             </div>
             <div class="section__description">
               <p>Разбираю сложные темы кибербезопасности понятным языком. Начните с этих материалов — они помогут увидеть, где именно утекает контроль над вашей цифровой жизнью.</p>
@@ -351,7 +360,8 @@
 
 
   <!-- ============ КОНФИДЕНЦИАЛЬНЫЕ КОНСУЛЬТАЦИИ ============ -->
-  <section class="section">
+  <!-- Использован класс section--compact для уменьшения отступов -->
+  <section class="section section--compact">
     <div class="container">
       <div class="row">
         <div class="col col-12">
@@ -364,7 +374,6 @@
             </div>
             <a href="https://t.me/miagika" target="_blank" rel="noopener" class="c-consultation__btn">
               Обсудить ситуацию в Telegram
-              <i class="ion ion-ios-arrow-forward"></i>
             </a>
           </div>
         </div>
@@ -394,7 +403,10 @@
             <h3 class="c-about-section__title">Карьера</h3>
             <ul class="c-about-list">
               <li><strong>ГБУЗ СО «Самарская городская больница № 6»</strong> — специалист по защите информации (октябрь 2025 — н.в.)</li>
-              <li><strong>ГБУЗ «СОМИАЦ»</strong> — начальник службы информационной безопасности (февраль — сентябрь 2025)</li>
+              <li>
+                <strong>ГБУЗ «СОМИАЦ»</strong> — начальник службы информационной безопасности (февраль — сентябрь 2025)<br>
+                <span style="font-size: 14px; color: #666; display: inline-block; margin-top: 6px;">Специализированный найм для урегулирования претензий надзорных органов и успешного прохождения внеплановых проверок (ФСБ, Прокуратура) без ущерба для деятельности организации.</span>
+              </li>
               <li><strong>ГБУЗ «СОККД им. В.П. Полякова»</strong> — заместитель главного врача по ИТ (май 2023 — февраль 2025)</li>
               <li><strong>ГБУЗ «СОМИАЦ»</strong> — начальник отдела защиты информации (октябрь 2021 — январь 2023)</li>
               <li><strong>ГКУ СО «Самарафармация»</strong> — инженер по защите информации (февраль — октябрь 2021)</li>
@@ -439,7 +451,7 @@
 </div>
 
 
-<div class="top" title="Наверх"><i class="ion ion-ios-arrow-up"></i></div>
+<div class="top" title="Наверх"><i class="ion ion-ios-arrow-up"></i></div> <!-- Если уберете Ionicons, замените на ↑ -->
 
 
 <!-- begin footer -->
@@ -451,16 +463,16 @@
         <div class="social">
           <ul class="social__list list-reset">
             <li class="social__item">
-              <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt=""></i></a>
+              <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt="Позвонить"></i></a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt=""></i></a>
+              <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt="ВКонтакте"></i></a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt=""></i></a>
+              <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt="Telegram"></i></a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt=""></i></a>
+              <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt="Почта"></i></a>
             </li>
           </ul>
         </div>
