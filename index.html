@@ -1,23 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>miagika</title>
-  <meta name='description' content='Визитка'>
-
+  <title>Кирилл Мяги — цифровая приватность и защита от слежки</title>
+  <meta name="description" content="Кирилл Мяги — специалист по защите информации. Конфиденциальные консультации по цифровой приватности, защите от слежки и утечек данных. Блог о безопасности для обычных людей.">
   <link rel="canonical" href="https://miagika.ru">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-
-  <!-- Ionicons -->
   <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="/assets/main.css">
+
+  <style>
+    /* ===== Секция конфиденциальных консультаций ===== */
+    .c-consultation {
+      position: relative;
+      padding: 60px 48px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .c-consultation::before {
+      content: "“";
+      position: absolute;
+      top: -30px;
+      right: 24px;
+      font-size: 200px;
+      font-weight: 900;
+      line-height: 1;
+      color: #fff;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .c-consultation__title {
+      position: relative;
+      z-index: 1;
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      color: #fff;
+    }
+    .c-consultation__text {
+      position: relative;
+      z-index: 1;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 32px;
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .c-consultation__text p { margin: 0 0 16px; }
+    .c-consultation__text p:last-child { margin-bottom: 0; }
+    .c-consultation__btn {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      border-radius: 16px;
+      color: #110E38;
+      background: #fff;
+      transition: all .25s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    .c-consultation__btn:hover {
+      color: #110E38;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .c-consultation__btn i {
+      transition: transform .25s ease;
+    }
+    .c-consultation__btn:hover i {
+      transform: translateX(3px);
+    }
+
+    /* ===== Компактные списки в блоке «Обо мне» ===== */
+    .c-about-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .c-about-list li {
+      position: relative;
+      padding: 14px 0 14px 28px;
+      border-bottom: 1px solid #d5dce3;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .c-about-list li:last-child { border-bottom: none; }
+    .c-about-list li::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 22px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
+    }
+    .c-about-section__title {
+      font-size: 24px;
+      margin: 0 0 16px;
+      line-height: 1.2;
+    }
+    .c-about-section + .c-about-section {
+      margin-top: 40px;
+    }
+
+    /* ===== Мобильная адаптация ===== */
+    @media (max-width: 576px) {
+      .c-consultation { padding: 40px 24px; }
+      .c-consultation__title { font-size: 24px; }
+      .c-consultation__text { font-size: 16px; }
+      .c-hero__btn { flex-wrap: wrap; }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,67 +150,38 @@
         <div class="logo">
           <a class="logo__link" href="/">
             <img class="logo__image" src="/uploads/logo.png" alt="miagika">
-
           </a>
         </div>
 
         <nav class="main-nav">
           <div class="main-nav__box">
-
             <div class="nav__icon-close">
               <i class="ion ion-md-close"></i>
             </div>
-
             <div class="nav__title">Меню</div>
-
-              <ul class="nav__list list-reset">
-
-                <!-- <li class="nav__item dropdown">
-                  <span class="nav__link dropdown-toggle">{{ item.title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
-                  <div class="dropdown-menu">
-                    {% for submenu-item in item.submenu %}
-                      <a href="{{ submenu-item.url }}" class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
-                    {% endfor %}
-                  </div>
-                </li>
-
-                {% else %} -->
-
-                <li class="nav__item">
-                  <a href="/" class="nav__link active-link">Главная</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/works/" class="nav__link">Статьи</a>
-                </li>
-                <li class="nav__item">
-                  <a href="/contacts/" class="nav__link">Контакты</a>
-                </li>
-
+            <ul class="nav__list list-reset">
+              <li class="nav__item"><a href="/" class="nav__link active-link">Главная</a></li>
+              <li class="nav__item"><a href="/works/" class="nav__link">Статьи</a></li>
+              <li class="nav__item"><a href="/contacts/" class="nav__link">Контакты</a></li>
             </ul>
           </div>
 
           <div class="social">
             <ul class="social__list list-reset">
-              
               <li class="social__item">
-                <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png"></i></a>
+                <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt=""></i></a>
               </li>
-              
               <li class="social__item">
-                <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png"></i></a>
+                <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt=""></i></a>
               </li>
-              
               <li class="social__item">
-                <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png"></i></a>
+                <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt=""></i></a>
               </li>
-              
               <li class="social__item">
-                <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png"></i></a>
+                <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt=""></i></a>
               </li>
-              
             </ul>
           </div>
-
         </nav>
 
         <div class="nav-button">
@@ -117,276 +193,291 @@
   </div>
 </header>
 <!-- end header -->
-          
-    <div class="c-page">
-  
+
+
+<div class="c-page">
+
+  <!-- ============ HERO ============ -->
   <section class="c-hero animate">
     <div class="container">
       <div class="row">
         <div class="col col-12">
           <div class="c-hero__inner">
-  
-            <div class="c-hero__left">
-              <h1 class="c-hero__title">Мяги Кирилл Александрович</h1>
-              <div class="c-hero__description"><p><strong>Специалист по защите информации</strong>&nbsp; <br>ГБУЗ СО "СГБ №6"</br><br><strong>Главный внештатный специалист</strong> по&nbsp;информационной инфраструктуре и  информационной безопасности</br>Министерства&nbsp;здравоохранения Самарской&nbsp;области</p></div>
-              <div class="c-hero__btn">
-                <a href="/contacts/" class="cta-button c-button c-button--primary c-button--small">Контакты</a>
 
+            <div class="c-hero__left">
+              <h1 class="c-hero__title">Цифровая приватность и защита от слежки</h1>
+              <div class="c-hero__description">
+                <p><strong>Кирилл Мяги</strong> — специалист по защите информации. Провожу закрытые консультации для частных лиц и организаций: без записи, без отчётов, без третьих лиц. Пишу статьи о том, как защитить свою цифровую жизнь.</p>
+              </div>
+              <div class="c-hero__btn">
+                <a href="/works/" class="cta-button c-button c-button--primary c-button--small">Читать статьи</a>
+                <a href="/contacts/" class="c-button c-button--secondary c-button--small">Обсудить ситуацию</a>
               </div>
             </div>
-  
+
             <div class="c-hero__right">
               <div class="c-hero__image">
-                <img loading="lazy" src="/uploads/me.jpg" alt="">
+                <img loading="lazy" src="/uploads/me.jpg" alt="Кирилл Мяги">
               </div>
             </div>
-  
+
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- end hero -->
-        
-  <!-- begin testimonials -->
-  <section class="section testimonials animate">
+
+
+  <!-- ============ С ЧЕГО НАЧАТЬ (избранные статьи) ============ -->
+  <section class="section">
     <div class="container">
+
       <div class="row">
         <div class="col col-12">
-  
-          <div class="section__info">
+          <div class="section__info animate">
             <div class="section__head">
-              <h2 class="section__title">Карьера</h2>
-              <ul class="controls list-reset" id="customize-controls" aria-label="Slider Navigation" tabindex="0">
-                <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
-                  <i class="ion ion-ios-arrow-back"></i>
-                </li>
-                <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
-                  <i class="ion ion-ios-arrow-forward"></i>
-                </li>
-              </ul>
+              <h2 class="section__title">С чего начать</h2>
+              <a class="section__link" href="/works/">Все статьи <i class="ion ion-ios-arrow-forward"></i></a>
             </div>
-            <div class="section__description"></div>
+            <div class="section__description">
+              <p>Разбираю сложные темы кибербезопасности понятным языком. Начните с этих материалов — они помогут увидеть, где именно утекает контроль над вашей цифровой жизнью.</p>
+            </div>
           </div>
-  
-          
-          <div class="testimonials__slider my-slider">
-            
-           <div class="c-testimonial-card">
-            <div class="c-testimonial-card__content">
-              <div class="c-testimonial-card__client-meta">
-                
-                  <div class="c-testimonial-card__image-container">
-                    <img class="c-testimonial-card__client-avatar" src="/uploads/logo_gb6.jpg" alt="ГБУЗ СО "Самарская городская больница № 6"">
-                  </div>
-                
-                <div class="c-testimonial-card__client-info">
-                  
-                    <h3 class="c-testimonial-card__client-name">ГБУЗ СО "Самарская городская больница № 6"</h3>
-                  
-                  
-                    <p class="c-testimonial-card__client-position">Специалист по защите информации</p>
-                  
-                </div>
-              </div>
-              
-                <p class="c-testimonial-card__client-text">Октябрь 2025 - н.в.</p>
-              
-            </div>
-          </div> 
+        </div>
+      </div>
 
-            
-           <div class="c-testimonial-card">
-            <div class="c-testimonial-card__content">
-              <div class="c-testimonial-card__client-meta">
-                
-                  <div class="c-testimonial-card__image-container">
-                    <img class="c-testimonial-card__client-avatar" src="/uploads/miac.png" alt="ГБУЗ "Самарский областной медицинский информационно-аналитический центр"">
-                  </div>
-                
-                <div class="c-testimonial-card__client-info">
-                  
-                    <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной медицинский информационно-аналитический центр"</h3>
-                  
-                  
-                    <p class="c-testimonial-card__client-position">Начальник службы информационной безопасности</p>
-                  
-                </div>
-              </div>
-              
-                <p class="c-testimonial-card__client-text">Февраль 2025 - Сентябрь 2025</p>
-              
+      <div class="row animate">
+
+        <!-- Статья: Стиллеры -->
+        <div class="c-blog-card col col-4 col-d-6 col-t-12">
+          <div class="c-blog-card__inner">
+            <div class="c-blog-card__image-wrap">
+              <a class="c-blog-card__image" href="/works/stiller/">
+                <img alt="Стиллеры" loading="lazy" src="/uploads/stiller.jpg">
+              </a>
             </div>
-          </div>  
-            
-          <div class="c-testimonial-card">
-            <div class="c-testimonial-card__content">
-              <div class="c-testimonial-card__client-meta">
-                
-                  <div class="c-testimonial-card__image-container">
-                    <img class="c-testimonial-card__client-avatar" src="/uploads/cardio.png" alt="ГБУЗ "Самарский областной клинический кардиологический диспансер им. В.П. Полякова"">
-                  </div>
-                
-                <div class="c-testimonial-card__client-info">
-                  
-                    <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной клинический кардиологический диспансер им. В.П. Полякова"</h3>
-                  
-                  
-                    <p class="c-testimonial-card__client-position">Заместитель главного врача по информационным технологиям</p>
-                  
+            <div class="c-blog-card__content">
+              <div class="c-blog-card__tags-box">
+                <span class="c-blog-card__tag">Защита данных</span>
+                <span class="c-blog-card__tag">Стиллер</span>
+              </div>
+              <h2 class="c-blog-card__title">
+                <a href="/works/stiller/">Стиллеры: воры, которые крадут ваши пароли прямо из браузера. Как их обнаружить?</a>
+              </h2>
+              <p class="c-blog-card__excerpt">
+                Как стиллеры крадут ваши пароли из браузера, как их обнаружить и защититься. Простые шаги для вашей безопасности.
+              </p>
+              <div class="c-blog-card__meta">
+                <div class="c-blog-card__author-image">
+                  <img alt="Кирилл Мяги" loading="lazy" src="/uploads/icon/iamgor.jpg">
+                </div>
+                <div class="c-blog-card__info">
+                  <div class="c-blog-card__author-name">Кирилл Мяги</div>
+                  <span class="c-blog-card__date"><time datetime="2026-03-30">30 Марта 2026</time></span>
                 </div>
               </div>
-              
-                <p class="c-testimonial-card__client-text">Май 2023 - Февраль 2025</p>
-              
             </div>
-          </div>
-            
-          <div class="c-testimonial-card">
-            <div class="c-testimonial-card__content">
-              <div class="c-testimonial-card__client-meta">
-                
-                  <div class="c-testimonial-card__image-container">
-                    <img class="c-testimonial-card__client-avatar" src="/uploads/miac.png" alt="ГБУЗ "Самарский областной медицинский информационно-аналитический центр"">
-                  </div>
-                
-                <div class="c-testimonial-card__client-info">
-                  
-                    <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной медицинский информационно-аналитический центр"</h3>
-                  
-                  
-                    <p class="c-testimonial-card__client-position">Начальник отдела защиты информации</p>
-                  
-                </div>
-              </div>
-              
-                <p class="c-testimonial-card__client-text">Октябрь 2021 - Январь 2023</p>
-              
-            </div>
-          </div>
-            
-          <div class="c-testimonial-card">
-            <div class="c-testimonial-card__content">
-              <div class="c-testimonial-card__client-meta">
-                
-                  <div class="c-testimonial-card__image-container">
-                    <img class="c-testimonial-card__client-avatar" src="/uploads/sf.png" alt="ГКУ СО "Самарафармация"">
-                  </div>
-                
-                <div class="c-testimonial-card__client-info">
-                  
-                    <h3 class="c-testimonial-card__client-name">ГКУ СО "Самарафармация"</h3>
-                  
-                  
-                    <p class="c-testimonial-card__client-position">Инженер по защите информации</p>
-                  
-                </div>
-              </div>
-            
-              <p class="c-testimonial-card__client-text">Февраль 2021 - Октябрь 2021</p>
-            
           </div>
         </div>
-            
-        <div class="c-testimonial-card">
-          <div class="c-testimonial-card__content">
-            <div class="c-testimonial-card__client-meta">
-              
-                <div class="c-testimonial-card__image-container">
-                  <img class="c-testimonial-card__client-avatar" src="/uploads/miac.png" alt="ГБУЗ "Самарский областной медицинский информационно-аналитический центр"">
+
+        <!-- Статья: VPN -->
+        <div class="c-blog-card col col-4 col-d-6 col-t-12">
+          <div class="c-blog-card__inner">
+            <div class="c-blog-card__image-wrap">
+              <a class="c-blog-card__image" href="/works/vpn/">
+                <img alt="VPN" loading="lazy" src="/uploads/vpn.png">
+              </a>
+            </div>
+            <div class="c-blog-card__content">
+              <div class="c-blog-card__tags-box">
+                <span class="c-blog-card__tag">Защита данных</span>
+                <span class="c-blog-card__tag">VPN</span>
+              </div>
+              <h2 class="c-blog-card__title">
+                <a href="/works/vpn/">Ваш VPN вас защищает или продает? Простой гид по выбору надежного сервиса</a>
+              </h2>
+              <p class="c-blog-card__excerpt">
+                Практическое руководство, которое научит отличать безопасный VPN от сервиса-шпиона и поможет выбрать надежную защиту для своих данных.
+              </p>
+              <div class="c-blog-card__meta">
+                <div class="c-blog-card__author-image">
+                  <img alt="Кирилл Мяги" loading="lazy" src="/uploads/icon/iamgor.jpg">
                 </div>
-              
-              <div class="c-testimonial-card__client-info">
-                
-                  <h3 class="c-testimonial-card__client-name">ГБУЗ "Самарский областной медицинский информационно-аналитический центр"</h3>
-                
-                
-                  <p class="c-testimonial-card__client-position">Специалист отдела защиты информации</p>
-                
+                <div class="c-blog-card__info">
+                  <div class="c-blog-card__author-name">Кирилл Мяги</div>
+                  <span class="c-blog-card__date"><time datetime="2026-01-15">15 Января 2026</time></span>
+                </div>
               </div>
             </div>
-            
-              <p class="c-testimonial-card__client-text">Сентябрь 2020 - Февраль 2021</p>
-            
           </div>
         </div>
-            <!--bookshop-live end-->
-            
-       </div>
-          
-  
-       </div>
-     </div>
+
+        <!-- Статья: Цифровая гигиена для старших -->
+        <div class="c-blog-card col col-4 col-d-6 col-t-12">
+          <div class="c-blog-card__inner">
+            <div class="c-blog-card__image-wrap">
+              <a class="c-blog-card__image" href="/works/Digital_Hygiene_for_Grandparents/">
+                <img alt="Цифровая гигиена для старших" loading="lazy" src="/uploads/Digital_Hygiene_for_Grandparents.png">
+              </a>
+            </div>
+            <div class="c-blog-card__content">
+              <div class="c-blog-card__tags-box">
+                <span class="c-blog-card__tag">Телефонные мошенники</span>
+                <span class="c-blog-card__tag">Старшее поколение</span>
+              </div>
+              <h2 class="c-blog-card__title">
+                <a href="/works/Digital_Hygiene_for_Grandparents/">Цифровая гигиена для бабушек и дедушек: как объяснить, что «тот банк» не звонит?</a>
+              </h2>
+              <p class="c-blog-card__excerpt">
+                Практичное руководство, как объяснить старшим родственникам простые правила защиты от телефонных мошенников.
+              </p>
+              <div class="c-blog-card__meta">
+                <div class="c-blog-card__author-image">
+                  <img alt="Кирилл Мяги" loading="lazy" src="/uploads/icon/iamgor.jpg">
+                </div>
+                <div class="c-blog-card__info">
+                  <div class="c-blog-card__author-name">Кирилл Мяги</div>
+                  <span class="c-blog-card__date"><time datetime="2026-01-27">27 Января 2026</time></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-    <div class="container">
-      <div class="page animate">
-        <h2><strong>Образование</strong></h2><ul>
-          <li><strong>​​​​​​​Компьютерная безопасность (специалитет)</strong>, математический факультет, Федеральное государственное автономное образовательное учреждение высшего образования "Самарский национальный исследовательский университет имени академика С.П. Королева", 2015 - 2021</li>
-          <li><strong>Телемедицина и системы принятия врачебных решений (магистратура)</strong>, информатика и вычислительная техника, передовая медицинская инженерная школа СамГМУ, Федеральное государсвенное бюджетное образовательное учреждение высшего образования "Самарский государственный медицинский университет", 2023 - 2025</li>
-          <li><strong>Государственное и муниципальное управление (бакалавриат)</strong>, АУП, БИОР, 2023 - 2026</li>
-        </ul>
-      </div>
-    </div>
 
+  <!-- ============ КОНФИДЕНЦИАЛЬНЫЕ КОНСУЛЬТАЦИИ ============ -->
+  <section class="section">
     <div class="container">
-      <div class="page animate">
-        <h2><strong>Достижения</strong></h2><ul>
-          <li><strong>Благодарственное письмо</strong> депутата Думы городского округа Самара С.В. Макушевой - Декабрь 2024</li>
-          <li><strong>Благодарственное письмо​​​​​​​</strong> ГБУЗ Самарский областной клинический кардиологический диспансер им. В.П. Полякова - Февраль 2025​​​​​​​</li>
-          <li><strong>Благодарственное письмо</strong> Думы городского округа Самара - Решение Совета Думы городского округа Самара от 11.03.2025 №&nbsp;167</li>
-        </ul>
-      </div>
-    </div>
-         
-  </div>
-  
-  <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
-
-    <!-- begin footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col col-12">
-    
-            <div class="social">
-              <ul class="social__list list-reset">
-                <li class="social__item">
-                  <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png"></i></a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png"></i></a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png"></i></a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png"></i></a>
-                </li>
-              </ul>
+      <div class="row">
+        <div class="col col-12">
+          <div class="c-consultation animate">
+            <h2 class="c-consultation__title">Когда стандартных статей недостаточно</h2>
+            <div class="c-consultation__text">
+              <p>Иногда проблема сложнее, чем кажется со стороны. Целенаправленная слежка, утечка данных, необходимость свести цифровой след к нулю — в таких ситуациях нужен план, а не общая теория.</p>
+              <p>Я провожу закрытые консультации, где мы разбираем именно вашу ситуацию. Всё, что вы расскажете, остаётся между нами. Без записей, без отчётов, без третьих лиц — так же, как работает адвокат или врач.</p>
             </div>
-    
-  
-    
-            <ul class="footer_nav list-reset">
-              
-              <li class="footer_nav__item">
-                <a href="/" class="footer_nav__link">miagika</a>
-              </li>
-              
-            </ul>
-    
-            <div class="copyright"><p>{year} © business card</p></div>
-    
+            <a href="https://t.me/miagika" target="_blank" rel="noopener" class="c-consultation__btn">
+              Обсудить ситуацию в Telegram
+              <i class="ion ion-ios-arrow-forward"></i>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- end footer -->
+    </div>
+  </section>
 
-    <script src="/js/scripts.js"></script>
-    <script src="/js/common.js"></script>
-    <script src="/js/year.js"></script>
+
+  <!-- ============ ОБО МНЕ ============ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="row">
+        <div class="col col-12">
+          <div class="section__info animate">
+            <div class="section__head">
+              <h2 class="section__title">Обо мне</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Карьера -->
+        <div class="col col-6 col-t-12 animate">
+          <div class="c-about-section">
+            <h3 class="c-about-section__title">Карьера</h3>
+            <ul class="c-about-list">
+              <li><strong>ГБУЗ СО «Самарская городская больница № 6»</strong> — специалист по защите информации (октябрь 2025 — н.в.)</li>
+              <li><strong>ГБУЗ «СОМИАЦ»</strong> — начальник службы информационной безопасности (февраль — сентябрь 2025)</li>
+              <li><strong>ГБУЗ «СОККД им. В.П. Полякова»</strong> — заместитель главного врача по ИТ (май 2023 — февраль 2025)</li>
+              <li><strong>ГБУЗ «СОМИАЦ»</strong> — начальник отдела защиты информации (октябрь 2021 — январь 2023)</li>
+              <li><strong>ГКУ СО «Самарафармация»</strong> — инженер по защите информации (февраль — октябрь 2021)</li>
+              <li><strong>ГБУЗ «СОМИАЦ»</strong> — специалист отдела защиты информации (сентябрь 2020 — февраль 2021)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Образование + Достижения -->
+        <div class="col col-6 col-t-12 animate">
+          <div class="c-about-section">
+            <h3 class="c-about-section__title">Образование</h3>
+            <ul class="c-about-list">
+              <li><strong>Компьютерная безопасность (специалитет)</strong> — Самарский национальный исследовательский университет им. С.П. Королева, 2015–2021</li>
+              <li><strong>Телемедицина и системы принятия врачебных решений (магистратура)</strong> — СамГМУ, 2023–2025</li>
+              <li><strong>Государственное и муниципальное управление (бакалавриат)</strong> — 2023–2026</li>
+            </ul>
+          </div>
+
+          <div class="c-about-section">
+            <h3 class="c-about-section__title">Достижения</h3>
+            <ul class="c-about-list">
+              <li><strong>Благодарственное письмо</strong> депутата Думы г.о. Самара С.В. Макушевой — декабрь 2024</li>
+              <li><strong>Благодарственное письмо</strong> ГБУЗ «СОККД им. В.П. Полякова» — февраль 2025</li>
+              <li><strong>Благодарственное письмо</strong> Думы г.о. Самара — решение Совета Думы от 11.03.2025 № 167</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-12 animate">
+          <div class="page" style="margin-top: 40px;">
+            <p><strong>Главный внештатный специалист</strong> по информационной инфраструктуре и информационной безопасности Министерства здравоохранения Самарской области.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+
+<div class="top" title="Наверх"><i class="ion ion-ios-arrow-up"></i></div>
+
+
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="social">
+          <ul class="social__list list-reset">
+            <li class="social__item">
+              <a class="social__link" href="tel:89360008086" rel="noopener" aria-label="phone icon"><i><img src="/uploads/icon/icon-phone.png" alt=""></i></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/miagika" target="_blank" rel="noopener" aria-label="vk icon"><i><img src="/uploads/icon/icon-vk.png" alt=""></i></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://t.me/miagika" target="_blank" rel="noopener" aria-label="telegram icon"><i><img src="/uploads/icon/icon-telegram.png" alt=""></i></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="mailto:miagika@mail.ru" rel="noopener" aria-label="email icon"><i><img src="/uploads/icon/icon-email.png" alt=""></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="footer_nav list-reset">
+          <li class="footer_nav__item"><a href="/" class="footer_nav__link">miagika</a></li>
+        </ul>
+
+        <div class="copyright"><p>{year} © Кирилл Мяги. Все материалы публикуются в образовательных целях.</p></div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+<script src="/js/scripts.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/year.js"></script>
 </body>
 </html>
