@@ -10,7 +10,6 @@
   <link rel="canonical" href="https://miagika.ru/contacts/">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/main.css">
 
   <style>
@@ -48,8 +47,15 @@
       border-radius: 12px;
       margin-bottom: 20px;
       background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
-      color: #fff;
-      font-size: 24px;
+    }
+
+    /* Стили для локальных картинок-иконок */
+    .c-contact-card__icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      /* Этот фильтр делает любую иконку белой */
+      filter: brightness(0) invert(1);
     }
 
     .c-contact-card__title {
@@ -78,12 +84,14 @@
     .c-contact-card__link:hover {
       color: #003687;
     }
-    .c-contact-card__link i {
+    /* Простая стрелочка для ссылки без использования шрифтов */
+    .c-contact-card__link::after {
+      content: "→";
       margin-left: 6px;
-      font-size: 14px;
+      font-size: 16px;
       transition: transform 0.2s ease;
     }
-    .c-contact-card__link:hover i {
+    .c-contact-card__link:hover::after {
       transform: translateX(3px);
     }
 
@@ -204,42 +212,42 @@
           <!-- Telegram (Приоритет) -->
           <div class="c-contact-card">
             <div class="c-contact-card__icon">
-              <i class="ion ion-paper-plane"></i>
+              <img src="/uploads/icon/icon-telegram.png" alt="Telegram">
             </div>
             <h3 class="c-contact-card__title">Telegram</h3>
             <p class="c-contact-card__desc">
               <strong>Приоритетный канал для конфиденциальных вопросов.</strong> Личные консультации, обсуждение чувствительных тем, оперативная связь.
             </p>
             <a href="https://t.me/miagika" target="_blank" rel="noopener" class="c-contact-card__link">
-              Написать в Telegram <i class="ion ion-ios-arrow-forward"></i>
+              Написать в Telegram
             </a>
           </div>
 
           <!-- Email -->
           <div class="c-contact-card">
             <div class="c-contact-card__icon">
-              <i class="ion ion-email"></i>
+              <img src="/uploads/icon/icon-email.png" alt="Email">
             </div>
             <h3 class="c-contact-card__title">Электронная почта</h3>
             <p class="c-contact-card__desc">
               Для официальных запросов, коммерческих предложений, запросов от СМИ и организаций.
             </p>
             <a href="mailto:miagika@mail.ru" class="c-contact-card__link">
-              miagika@mail.ru <i class="ion ion-ios-arrow-forward"></i>
+              miagika@mail.ru
             </a>
           </div>
 
           <!-- Телефон -->
           <div class="c-contact-card">
             <div class="c-contact-card__icon">
-              <i class="ion ion-ios-call"></i>
+              <img src="/uploads/icon/icon-phone.png" alt="Телефон">
             </div>
             <h3 class="c-contact-card__title">Телефон</h3>
             <p class="c-contact-card__desc">
               Для срочных вопросов или предварительной договоренности о звонке. Прошу учитывать часовой пояс (Самара, UTC+4).
             </p>
             <a href="tel:+79360008086" class="c-contact-card__link">
-              +7 (936) 000-80-86 <i class="ion ion-ios-arrow-forward"></i>
+              +7 (936) 000-80-86
             </a>
           </div>
 
